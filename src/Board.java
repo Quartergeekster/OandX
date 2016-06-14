@@ -55,15 +55,16 @@ public class Board {
 
     public void paint(){
         for(int row = 0; row < ROWS; ++row){
-            for(int col = 0; col < COLS;++col){
+            for(int col = 0; col < COLS;++col) {
                 cells[row][col].paint();
-                if(col < COLS - 1){
+                if (col < COLS - 1) {
                     System.out.print("|");
                 }
+            }
+            if(row < ROWS - 1) {
                 System.out.println();
-                if(row < ROWS - 1){
-                    System.out.print("----------");
-                }
+                System.out.print("----------");
+                System.out.println();
             }
         }
     }

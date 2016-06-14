@@ -13,13 +13,14 @@ public class GameMain {
 
     public GameMain(){
         board = new Board();
-
+        board.paint();
         initGame();
 
         do {
             playerMove(CurrentPlayer);
             board.paint();
             UpdateGame(CurrentPlayer);
+            System.out.println();
 
             if(CurrentState == GameState.X_WON){
                 System.out.println("X has won.");
@@ -54,6 +55,7 @@ public class GameMain {
     public void playerMove(Seed TheSeed){
         boolean validInput = false;
         do {
+            System.out.println();
             if(TheSeed == Seed.CROSS) {
                 System.out.print("Player X: Enter your move (Row, col)");
             }
@@ -76,5 +78,8 @@ public class GameMain {
                 System.out.println("This move is invalid, try again.");
             }
         } while(!validInput);
+    }
+    public static void main(String[] args){
+        new GameMain();
     }
 }
