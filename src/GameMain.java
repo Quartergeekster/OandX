@@ -8,11 +8,13 @@ public class GameMain {
     private Board board;
     private GameState CurrentState;
     private Seed CurrentPlayer;
+    private AIPlayer AI;
 
     private static Scanner in = new Scanner(System.in);
 
     public GameMain(){
         board = new Board();
+        AI = new AIPlayer();
         board.paint();
         initGame();
 
@@ -55,16 +57,20 @@ public class GameMain {
     public void playerMove(Seed TheSeed){
         boolean validInput = false;
         do {
+            int row;
+            int col;
             System.out.println();
             if(TheSeed == Seed.CROSS) {
                 System.out.print("Player X: Enter your move (Row, col)");
+                row = in.nextInt() - 1;
+                col = in.nextInt() - 1;
             }
             else {
-                System.out.print("Player O: Enter your move(Row, col)");
+                AI.AIMove(board);
+                row = AI.row;
+                col = AI.col;
             }
 
-            int row = in.nextInt() - 1;
-            int col = in.nextInt() - 1;
 
             if (row >= 0 && row < Board.ROWS && col >=0 && col < Board.COLS && board.cells[row][col].content == Seed.EMPTY)
             {
