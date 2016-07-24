@@ -8,13 +8,11 @@ public class GameMain {
     private Board board;
     private GameState CurrentState;
     private Seed CurrentPlayer;
-    private AIPlayer AI;
 
     private static Scanner in = new Scanner(System.in);
 
     public GameMain(){
         board = new Board();
-        AI = new AIPlayer();
         board.paint();
         initGame();
 
@@ -66,9 +64,9 @@ public class GameMain {
                 col = in.nextInt() - 1;
             }
             else {
-                AI.AIMove(board);
-                row = AI.row;
-                col = AI.col;
+                System.out.print("Player O: Enter your move (Row, col)");
+                row = in.nextInt() - 1;
+                col = in.nextInt() - 1;
             }
 
 
