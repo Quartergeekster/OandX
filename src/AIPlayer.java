@@ -30,11 +30,19 @@ public class AIPlayer {
 
     public void DeclareMove(ArrayList<ArrayList<Integer>> OpenCells)
     {
-        int RN1 = (int)(Math.random()*(OpenCells.size()-1));
-        int RN2 = (int)(Math.random()*(OpenCells.get(RN1).size()-1));
-        row = RN1;
-        col = RN2;
+        int RN1;
+        do{
+            System.out.println("Started Do While");
+            RN1 = (int)(Math.random()* (OpenCells.size()));
+            System.out.println("RN1 assigned");
+        }
+        while((OpenCells.get(RN1).isEmpty()));
 
+        System.out.println("Left Do While");
+
+        int RN2 = (int) (Math.random() * (OpenCells.get(RN1).size()));
+        row = RN1;
+        col = OpenCells.get(RN1).get(RN2);
     }
 
     public void AIMove(Board board)
