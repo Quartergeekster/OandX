@@ -1,3 +1,5 @@
+import com.sun.org.apache.xpath.internal.operations.Bool;
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Random;
@@ -11,7 +13,7 @@ public class AIPlayer {
     public int row;
 
 
-    public ArrayList<ArrayList<Integer>> ReadBoard(Board board)
+    public ArrayList<ArrayList<Integer>> ReadBoard(Board board)  //Returns an Arraylist of Arraylists that show every empty Square
     {
         ArrayList<ArrayList<Integer>> EmptyCells = new ArrayList<>();
         for (int i = 0; i < 3; i++) { // For each Row
@@ -28,13 +30,33 @@ public class AIPlayer {
         return EmptyCells;
     }
 
-    public void DeclareMove(ArrayList<ArrayList<Integer>> OpenCells)
+    public void DeclareMove(ArrayList<ArrayList<Integer>> OpenCells, Board board) //Assigns values to row and col, so that a move can be made
+    {
+        CheckForLines(OpenCells, board);
+        SelectRandomCell(OpenCells);
+    }
+
+    private void CheckForLines(ArrayList<ArrayList<Integer>> OpenCells, Board board) //Checks for potential wins in Horizontal and vertical lines
+    {
+
+        for(int i = 0; i < OpenCells.size(); i++) //Checks for horizontal matches
+        {
+            if(OpenCells.get(i).size() == 1)
+            {
+                row = i;
+                col = OpenCells.get(i).get(0);
+                break;
+            }
+        }
+    }
+
+    public void SelectRandomCell(ArrayList<ArrayList<Integer>> OpenCells)
     {
         int RN1;
         do{
-            System.out.println("Started Do While");
+            //System.out.println("Started Do While");
             RN1 = (int)(Math.random()* (OpenCells.size()));
-            System.out.println("RN1 assigned");
+            //System.out.println("RN1 assigned");
         }
         while((OpenCells.get(RN1).isEmpty()));
 
@@ -45,9 +67,9 @@ public class AIPlayer {
         col = OpenCells.get(RN1).get(RN2);
     }
 
-    public void AIMove(Board board)
+    public void AIMove(Board board) //Overall Main Program
     {
         ArrayList<ArrayList<Integer>> OpenCells = ReadBoard(board);
-        DeclareMove(OpenCells);
+        DeclareMove(OpenCells, board);
     }
 }
