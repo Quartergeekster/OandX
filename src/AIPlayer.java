@@ -32,18 +32,23 @@ public class AIPlayer {
 
     public void DeclareMove(ArrayList<ArrayList<Integer>> OpenCells, Board board) //Assigns values to row and col, so that a move can be made
     {
-        CheckForLines(OpenCells, board);
+        CheckForHorizontal(OpenCells);
+        CheckForLines(OpenCells);
         //SelectRandomCell(OpenCells);
     }
 
-    private void CheckForLines(ArrayList<ArrayList<Integer>> OpenCells) //Checks for potential wins in Horizontal and vertical lines
+    private void CheckForLines(ArrayList<ArrayList<Integer>> OpenCells) //Checks for potential losses in vertical lines
 
 
-    private void CheckForHorizontal(ArrayList<ArrayList<Integer>> OpenCells)
+    private void CheckForHorizontal(ArrayList<ArrayList<Integer>> OpenCells) //Checks for potential losses in Horizontal lines
     {
         for(int i = 0; i < 3; i++)
         {
-
+            if(OpenCells.get(i).size() == 1)
+            {
+                row = i;
+                col = OpenCells.get(i).get(0);
+            }
         }
     }
 
