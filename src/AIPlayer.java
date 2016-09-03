@@ -26,7 +26,6 @@ public class AIPlayer {
             }
             EmptyCells.add(SingleCell);
         }
-        System.out.println(EmptyCells);
         return EmptyCells;
     }
 
@@ -36,7 +35,6 @@ public class AIPlayer {
         while(!MoveMade) {
             MoveMade = CheckForHorizontal(OpenCells, board);
             if (MoveMade) {
-                System.out.println("Loop broken");
                 break;
             }
             MoveMade = CheckForLines(OpenCells, board);
@@ -44,7 +42,6 @@ public class AIPlayer {
                 break;
             }
             SelectRandomCell(OpenCells);
-            System.out.println("Loop not broken");
             MoveMade = true;
         }
     }

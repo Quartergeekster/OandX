@@ -13,13 +13,16 @@ public class GameMain {
     private static Scanner in = new Scanner(System.in);
 
     public GameMain(){
+        System.out.println("\t\tWelcome to O and X, you will be playing as X, and you will go first.\n\n");
         board = new Board();
         AI = new AIPlayer();
         board.paint();
         initGame();
 
         do {
+            System.out.println();
             playerMove(CurrentPlayer);
+            System.out.println();
             board.paint();
             UpdateGame(CurrentPlayer);
             System.out.println();
@@ -61,7 +64,7 @@ public class GameMain {
             int col;
             System.out.println();
             if(TheSeed == Seed.CROSS) {
-                System.out.print("Player X: Enter your move (Row, col)");
+                System.out.print("Player X: Enter your move (Row, SPACE, col): ");
                 row = in.nextInt() - 1;
                 col = in.nextInt() - 1;
             }
@@ -84,7 +87,6 @@ public class GameMain {
             else {
                 System.out.println("This move is invalid, try again.");
             }
-            in.nextLine();
         } while(!validInput);
     }
     public static void main(String[] args){
