@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_xando" default="compile.module.xando">
+  <dirname property="module.xando.basedir" file="${ant.file.module_xando}"/>
+  
+  <property name="module.jdk.home.xando" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.xando" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.xando" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.xando" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="xando.output.dir" value="${module.xando.basedir}/out/production/XandO"/>
+  <property name="xando.testoutput.dir" value="${module.xando.basedir}/out/test/XandO"/>
+  
+  <path id="xando.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="xando.module.production.classpath">
+    <path refid="${module.jdk.classpath.xando}"/>
+  </path>
+  
+  <path id="xando.runtime.production.module.classpath">
+    <pathelement location="${xando.output.dir}"/>
+  </path>
+  
+  <path id="xando.module.classpath">
+    <path refid="${module.jdk.classpath.xando}"/>
+    <pathelement location="${xando.output.dir}"/>
+  </path>
+  
+  <path id="xando.runtime.module.classpath">
+    <pathelement location="${xando.testoutput.dir}"/>
+    <pathelement location="${xando.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.xando">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.xando">
+    <patternset refid="excluded.from.module.xando"/>
+  </patternset>
+  
+  <path id="xando.module.sourcepath">
+    <dirset dir="${module.xando.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.xando" depends="compile.module.xando.production,compile.module.xando.tests" description="Compile module XandO"/>
+  
+  <target name="compile.module.xando.production" depends="register.custom.compilers" description="Compile module XandO; production classes">
+    <mkdir dir="${xando.output.dir}"/>
+    <javac2 destdir="${xando.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.xando}/javac">
+      <compilerarg line="${compiler.args.xando}"/>
+      <bootclasspath refid="xando.module.bootclasspath"/>
+      <classpath refid="xando.module.production.classpath"/>
+      <src refid="xando.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.xando"/>
+    </javac2>
+    
+    <copy todir="${xando.output.dir}">
+      <fileset dir="${module.xando.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.xando.tests" depends="register.custom.compilers,compile.module.xando.production" description="compile module XandO; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.xando" description="cleanup module">
+    <delete dir="${xando.output.dir}"/>
+    <delete dir="${xando.testoutput.dir}"/>
+  </target>
+</project>
