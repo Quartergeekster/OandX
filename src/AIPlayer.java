@@ -55,21 +55,30 @@ public class AIPlayer {
         {
             if(OpenCells.get(0).indexOf(i) == -1 && OpenCells.get(1).indexOf(i) == -1 && board.cells[0][i].content == board.cells[1][i].content) //Checks vertical cells for row 0 and 1
             {
-                row = 2;
-                col = i;
-                return true;
+               if(board.cells[2][i].content == Seed.EMPTY)
+               {
+                   row = 2;
+                   col = i;
+                   return true;
+               }
             }
             if(OpenCells.get(1).indexOf(i) == -1 && OpenCells.get(2).indexOf(i) == -1 && board.cells[1][i].content == board.cells[2][i].content) //Checks vertical cells for rows 1 and 2
             {
-                row = 0;
-                col = i;
-                return true;
+                if(board.cells[0][i].content == Seed.EMPTY)
+                {
+                    row = 0;
+                    col = i;
+                    return true;
+                }
             }
             if(OpenCells.get(0).indexOf(i) == -1 && OpenCells.get(2).indexOf(i) == -1 && board.cells[0][i].content == board.cells[2][i].content)
             {
-                row = 1;
-                col = i;
-                return true;
+                if(board.cells[1][i].content == Seed.EMPTY)
+                {
+                    row = 1;
+                    col = i;
+                    return true;
+                }
             }
 
         }
@@ -101,9 +110,7 @@ public class AIPlayer {
     {
         int RN1;
         do{
-            //System.out.println("Started Do While");
             RN1 = (int)(Math.random()* (OpenCells.size()));
-            //System.out.println("RN1 assigned");
         }
         while((OpenCells.get(RN1).isEmpty()));
 
