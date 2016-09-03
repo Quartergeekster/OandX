@@ -1,6 +1,6 @@
 Repo for a basic Noughts and crosses engine.
 
-This branch has a basic AI that checks the board to find empty squares, and places its piece in a random cell in the game.
+This branch has a more advanced AI that tries to find player's potential winning lines, and block them.
 
 All AI code written by me.
 

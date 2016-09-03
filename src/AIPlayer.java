@@ -32,24 +32,69 @@ public class AIPlayer {
 
     public void DeclareMove(ArrayList<ArrayList<Integer>> OpenCells, Board board) //Assigns values to row and col, so that a move can be made
     {
-        CheckForHorizontal(OpenCells);
-        CheckForLines(OpenCells);
-        //SelectRandomCell(OpenCells);
+        boolean MoveMade = false;
+        while(!MoveMade) {
+            MoveMade = CheckForHorizontal(OpenCells, board);
+            if (MoveMade) {
+                System.out.println("Loop broken");
+                break;
+            }
+            MoveMade = CheckForLines(OpenCells, board);
+            if (MoveMade) {
+                break;
+            }
+            SelectRandomCell(OpenCells);
+            System.out.println("Loop not broken");
+            MoveMade = true;
+        }
     }
 
-    private void CheckForLines(ArrayList<ArrayList<Integer>> OpenCells) //Checks for potential losses in vertical lines
-
-
-    private void CheckForHorizontal(ArrayList<ArrayList<Integer>> OpenCells) //Checks for potential losses in Horizontal lines
+    private boolean CheckForLines(ArrayList<ArrayList<Integer>> OpenCells, Board board) //Checks for potential losses in vertical lines
     {
         for(int i = 0; i < 3; i++)
         {
-            if(OpenCells.get(i).size() == 1)
+            if(OpenCells.get(0).indexOf(i) == -1 && OpenCells.get(1).indexOf(i) == -1 && board.cells[0][i].content == board.cells[1][i].content) //Checks vertical cells for row 0 and 1
             {
-                row = i;
-                col = OpenCells.get(i).get(0);
+                row = 2;
+                col = i;
+                return true;
+            }
+            if(OpenCells.get(1).indexOf(i) == -1 && OpenCells.get(2).indexOf(i) == -1 && board.cells[1][i].content == board.cells[2][i].content) //Checks vertical cells for rows 1 and 2
+            {
+                row = 0;
+                col = i;
+                return true;
+            }
+            if(OpenCells.get(0).indexOf(i) == -1 && OpenCells.get(2).indexOf(i) == -1 && board.cells[0][i].content == board.cells[2][i].content)
+            {
+                row = 1;
+                col = i;
+                return true;
+            }
+
+        }
+        return false;
+    }
+
+
+    private boolean CheckForHorizontal(ArrayList<ArrayList<Integer>> OpenCells, Board board) //Checks for potential losses in Horizontal lines
+    {
+        for(int i = 0; i < 3; i++)
+        {
+            ArrayList<Integer> clean = new ArrayList<Integer>();
+            clean.add(0); clean.add(1); clean.add(2); //Adds all possible cells to Clean
+            if(OpenCells.get(i).size() == 1) //If only one open cell per row
+            {
+                clean.removeAll(OpenCells.get(i)); //Converts clean arraylist into arraylist of spaces taken in that row
+                if(board.cells[i][clean.get(0)].content == board.cells[i][clean.get(1)].content) //If both taken cells in row are the same
+                {
+                    row = i;
+                    col = OpenCells.get(i).get(0);
+                    return true;
+                }
             }
         }
+        return false;
     }
 
     public void SelectRandomCell(ArrayList<ArrayList<Integer>> OpenCells)
@@ -62,7 +107,7 @@ public class AIPlayer {
         }
         while((OpenCells.get(RN1).isEmpty()));
 
-        System.out.println("Left Do While");
+        //System.out.println("Left Do While");
 
         int RN2 = (int) (Math.random() * (OpenCells.get(RN1).size()));
         row = RN1;

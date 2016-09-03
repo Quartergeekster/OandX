@@ -70,7 +70,6 @@ public class GameMain {
                 row = AI.row;
                 col = AI.col;
                 System.out.println("AI chose row " + row + " and col " + col);
-                //Occasional crash due to improperly random generated number
             }
 
 
