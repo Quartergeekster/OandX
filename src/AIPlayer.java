@@ -54,8 +54,7 @@ public class AIPlayer {
             {
                if(board.cells[2][i].content == Seed.EMPTY)
                {
-                   row = 2;
-                   col = i;
+                   MakeMove(2, i);
                    return true;
                }
             }
@@ -63,8 +62,7 @@ public class AIPlayer {
             {
                 if(board.cells[0][i].content == Seed.EMPTY)
                 {
-                    row = 0;
-                    col = i;
+                    MakeMove(0, i);
                     return true;
                 }
             }
@@ -72,8 +70,7 @@ public class AIPlayer {
             {
                 if(board.cells[1][i].content == Seed.EMPTY)
                 {
-                    row = 1;
-                    col = i;
+                    MakeMove(1, i);
                     return true;
                 }
             }
@@ -94,8 +91,7 @@ public class AIPlayer {
                 clean.removeAll(OpenCells.get(i)); //Converts clean arraylist into arraylist of spaces taken in that row
                 if(board.cells[i][clean.get(0)].content == board.cells[i][clean.get(1)].content) //If both taken cells in row are the same
                 {
-                    row = i;
-                    col = OpenCells.get(i).get(0);
+                    MakeMove(i, OpenCells.get(i).get(0));
                     return true;
                 }
             }
@@ -113,14 +109,20 @@ public class AIPlayer {
 
         //System.out.println("Left Do While");
 
-        int RN2 = (int) (Math.random() * (OpenCells.get(RN1).size()));
-        row = RN1;
-        col = OpenCells.get(RN1).get(RN2);
+        int RandomCol = (int) (Math.random() * (OpenCells.get(RN1).size()));
+        int ColumnToPlay = OpenCells.get(RN1).get(RandomCol);
+        MakeMove(RN1, ColumnToPlay);
     }
 
     public void AIMove(Board board) //Overall Main Program
     {
         ArrayList<ArrayList<Integer>> OpenCells = ReadBoard(board);
         DeclareMove(OpenCells, board);
+    }
+
+    public void MakeMove(int i, int j)
+    {
+        row = i;
+        col = j;
     }
 }
