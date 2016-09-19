@@ -7,6 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9cd8c717-a83e-4a43-83b2-5ed8efe82518" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AIPlayer.java" afterPath="$PROJECT_DIR$/src/AIPlayer.java" />
     </list>
     <ignored path="XandO.iws" />
@@ -35,9 +36,10 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="88" column="13" selection-start-line="88" selection-start-column="13" selection-end-line="88" selection-end-column="13" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
                 <element signature="method#initGame#0;class#GameMain#0" expanded="false" />
                 <element signature="method#UpdateGame#0;class#GameMain#0" expanded="false" />
+                <element signature="e#2733#2734#0" expanded="false" />
+                <element signature="e#2763#2764#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -57,7 +59,7 @@
         <entry file="file://$PROJECT_DIR$/src/Board.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="18" />
+              <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -76,14 +78,14 @@
       <file leaf-file-name="AIPlayer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AIPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7659575">
-              <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.93622446">
+              <caret line="139" column="28" selection-start-line="139" selection-start-column="28" selection-end-line="139" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#ReadBoard#0;class#AIPlayer#0" expanded="false" />
+                <element signature="method#CheckForLines#0;class#AIPlayer#0" expanded="false" />
                 <element signature="method#CheckForHorizontal#0;class#AIPlayer#0" expanded="false" />
                 <element signature="method#SelectRandomCell#0;class#AIPlayer#0" expanded="false" />
-                <element signature="method#AIMove#0;class#AIPlayer#0" expanded="false" />
                 <element signature="method#MakeMove#0;class#AIPlayer#0" expanded="false" />
               </folding>
             </state>
@@ -174,7 +176,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -209,6 +210,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
@@ -532,26 +534,26 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3285834" sideWeight="0.49596775" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3261767" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839507" sideWeight="0.50403225" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942164" sideWeight="0.49596775" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3220479" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32782823" sideWeight="0.49596775" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25787964" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25787964" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3261767" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3220479" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -567,7 +569,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="7" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -591,9 +593,9 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#ReadBoard#0;class#AIPlayer#0" expanded="false" />
+            <element signature="method#CheckForLines#0;class#AIPlayer#0" expanded="false" />
             <element signature="method#CheckForHorizontal#0;class#AIPlayer#0" expanded="false" />
             <element signature="method#SelectRandomCell#0;class#AIPlayer#0" expanded="false" />
-            <element signature="method#AIMove#0;class#AIPlayer#0" expanded="false" />
             <element signature="method#MakeMove#0;class#AIPlayer#0" expanded="false" />
           </folding>
         </state>
@@ -604,9 +606,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="68" column="33" selection-start-line="68" selection-start-column="15" selection-end-line="68" selection-end-column="33" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
             <element signature="method#initGame#0;class#GameMain#0" expanded="false" />
             <element signature="method#UpdateGame#0;class#GameMain#0" expanded="false" />
+            <element signature="e#2733#2734#0" expanded="false" />
+            <element signature="e#2763#2764#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -632,9 +635,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="68" column="33" selection-start-line="68" selection-start-column="15" selection-end-line="68" selection-end-column="33" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
             <element signature="method#initGame#0;class#GameMain#0" expanded="false" />
             <element signature="method#UpdateGame#0;class#GameMain#0" expanded="false" />
+            <element signature="e#2733#2734#0" expanded="false" />
+            <element signature="e#2763#2764#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -660,9 +664,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
             <element signature="method#initGame#0;class#GameMain#0" expanded="false" />
             <element signature="method#UpdateGame#0;class#GameMain#0" expanded="false" />
+            <element signature="e#2733#2734#0" expanded="false" />
+            <element signature="e#2763#2764#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -682,9 +687,9 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#ReadBoard#0;class#AIPlayer#0" expanded="false" />
+            <element signature="method#CheckForLines#0;class#AIPlayer#0" expanded="false" />
             <element signature="method#CheckForHorizontal#0;class#AIPlayer#0" expanded="false" />
             <element signature="method#SelectRandomCell#0;class#AIPlayer#0" expanded="false" />
-            <element signature="method#AIMove#0;class#AIPlayer#0" expanded="false" />
             <element signature="method#MakeMove#0;class#AIPlayer#0" expanded="false" />
           </folding>
         </state>
@@ -703,9 +708,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
             <element signature="method#initGame#0;class#GameMain#0" expanded="false" />
             <element signature="method#UpdateGame#0;class#GameMain#0" expanded="false" />
+            <element signature="e#2733#2734#0" expanded="false" />
+            <element signature="e#2763#2764#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -725,9 +731,9 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#ReadBoard#0;class#AIPlayer#0" expanded="false" />
+            <element signature="method#CheckForLines#0;class#AIPlayer#0" expanded="false" />
             <element signature="method#CheckForHorizontal#0;class#AIPlayer#0" expanded="false" />
             <element signature="method#SelectRandomCell#0;class#AIPlayer#0" expanded="false" />
-            <element signature="method#AIMove#0;class#AIPlayer#0" expanded="false" />
             <element signature="method#MakeMove#0;class#AIPlayer#0" expanded="false" />
           </folding>
         </state>
@@ -746,9 +752,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="78" column="31" selection-start-line="78" selection-start-column="31" selection-end-line="78" selection-end-column="31" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
             <element signature="method#initGame#0;class#GameMain#0" expanded="false" />
             <element signature="method#UpdateGame#0;class#GameMain#0" expanded="false" />
+            <element signature="e#2733#2734#0" expanded="false" />
+            <element signature="e#2763#2764#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -760,9 +767,9 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#ReadBoard#0;class#AIPlayer#0" expanded="false" />
+            <element signature="method#CheckForLines#0;class#AIPlayer#0" expanded="false" />
             <element signature="method#CheckForHorizontal#0;class#AIPlayer#0" expanded="false" />
             <element signature="method#SelectRandomCell#0;class#AIPlayer#0" expanded="false" />
-            <element signature="method#AIMove#0;class#AIPlayer#0" expanded="false" />
             <element signature="method#MakeMove#0;class#AIPlayer#0" expanded="false" />
           </folding>
         </state>
@@ -781,9 +788,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="78" column="31" selection-start-line="78" selection-start-column="31" selection-end-line="78" selection-end-column="31" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
             <element signature="method#initGame#0;class#GameMain#0" expanded="false" />
             <element signature="method#UpdateGame#0;class#GameMain#0" expanded="false" />
+            <element signature="e#2733#2734#0" expanded="false" />
+            <element signature="e#2763#2764#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -795,9 +803,9 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#ReadBoard#0;class#AIPlayer#0" expanded="false" />
+            <element signature="method#CheckForLines#0;class#AIPlayer#0" expanded="false" />
             <element signature="method#CheckForHorizontal#0;class#AIPlayer#0" expanded="false" />
             <element signature="method#SelectRandomCell#0;class#AIPlayer#0" expanded="false" />
-            <element signature="method#AIMove#0;class#AIPlayer#0" expanded="false" />
             <element signature="method#MakeMove#0;class#AIPlayer#0" expanded="false" />
           </folding>
         </state>
@@ -816,9 +824,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="78" column="31" selection-start-line="78" selection-start-column="31" selection-end-line="78" selection-end-column="31" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
             <element signature="method#initGame#0;class#GameMain#0" expanded="false" />
             <element signature="method#UpdateGame#0;class#GameMain#0" expanded="false" />
+            <element signature="e#2733#2734#0" expanded="false" />
+            <element signature="e#2763#2764#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -830,9 +839,9 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#ReadBoard#0;class#AIPlayer#0" expanded="false" />
+            <element signature="method#CheckForLines#0;class#AIPlayer#0" expanded="false" />
             <element signature="method#CheckForHorizontal#0;class#AIPlayer#0" expanded="false" />
             <element signature="method#SelectRandomCell#0;class#AIPlayer#0" expanded="false" />
-            <element signature="method#AIMove#0;class#AIPlayer#0" expanded="false" />
             <element signature="method#MakeMove#0;class#AIPlayer#0" expanded="false" />
           </folding>
         </state>
@@ -843,9 +852,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
             <element signature="method#initGame#0;class#GameMain#0" expanded="false" />
             <element signature="method#UpdateGame#0;class#GameMain#0" expanded="false" />
+            <element signature="e#2733#2734#0" expanded="false" />
+            <element signature="e#2763#2764#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -855,9 +865,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
             <element signature="method#initGame#0;class#GameMain#0" expanded="false" />
             <element signature="method#UpdateGame#0;class#GameMain#0" expanded="false" />
+            <element signature="e#2733#2734#0" expanded="false" />
+            <element signature="e#2763#2764#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -867,9 +878,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="87" column="26" selection-start-line="87" selection-start-column="26" selection-end-line="87" selection-end-column="26" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
             <element signature="method#initGame#0;class#GameMain#0" expanded="false" />
             <element signature="method#UpdateGame#0;class#GameMain#0" expanded="false" />
+            <element signature="e#2733#2734#0" expanded="false" />
+            <element signature="e#2763#2764#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -879,9 +891,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
             <element signature="method#initGame#0;class#GameMain#0" expanded="false" />
             <element signature="method#UpdateGame#0;class#GameMain#0" expanded="false" />
+            <element signature="e#2733#2734#0" expanded="false" />
+            <element signature="e#2763#2764#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -919,9 +932,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="70" column="29" selection-start-line="70" selection-start-column="29" selection-end-line="70" selection-end-column="29" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
             <element signature="method#initGame#0;class#GameMain#0" expanded="false" />
             <element signature="method#UpdateGame#0;class#GameMain#0" expanded="false" />
+            <element signature="e#2733#2734#0" expanded="false" />
+            <element signature="e#2763#2764#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -959,9 +973,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="70" column="29" selection-start-line="70" selection-start-column="29" selection-end-line="70" selection-end-column="29" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
             <element signature="method#initGame#0;class#GameMain#0" expanded="false" />
             <element signature="method#UpdateGame#0;class#GameMain#0" expanded="false" />
+            <element signature="e#2733#2734#0" expanded="false" />
+            <element signature="e#2763#2764#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -999,9 +1014,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
             <element signature="method#initGame#0;class#GameMain#0" expanded="false" />
             <element signature="method#UpdateGame#0;class#GameMain#0" expanded="false" />
+            <element signature="e#2733#2734#0" expanded="false" />
+            <element signature="e#2763#2764#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1013,26 +1029,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Seed.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -1050,9 +1050,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="88" column="13" selection-start-line="88" selection-start-column="13" selection-end-line="88" selection-end-column="13" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
             <element signature="method#initGame#0;class#GameMain#0" expanded="false" />
             <element signature="method#UpdateGame#0;class#GameMain#0" expanded="false" />
+            <element signature="e#2733#2734#0" expanded="false" />
+            <element signature="e#2763#2764#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1061,20 +1062,35 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.095663264">
           <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AIPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7659575">
-          <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.93622446">
+          <caret line="139" column="28" selection-start-line="139" selection-start-column="28" selection-end-line="139" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#ReadBoard#0;class#AIPlayer#0" expanded="false" />
+            <element signature="method#CheckForLines#0;class#AIPlayer#0" expanded="false" />
             <element signature="method#CheckForHorizontal#0;class#AIPlayer#0" expanded="false" />
             <element signature="method#SelectRandomCell#0;class#AIPlayer#0" expanded="false" />
-            <element signature="method#AIMove#0;class#AIPlayer#0" expanded="false" />
             <element signature="method#MakeMove#0;class#AIPlayer#0" expanded="false" />
           </folding>
         </state>

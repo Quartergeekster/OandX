@@ -41,6 +41,10 @@ public class AIPlayer {
             if (MoveMade) {
                 break;
             }
+            MoveMade = CheckDiagonals(OpenCells, board);
+            if(MoveMade) {
+                break;
+            }
             SelectRandomCell(OpenCells);
             MoveMade = true;
         }
@@ -94,6 +98,46 @@ public class AIPlayer {
                     MakeMove(i, OpenCells.get(i).get(0));
                     return true;
                 }
+            }
+        }
+        return false;
+    }
+
+    private boolean CheckDiagonals(ArrayList<ArrayList<Integer>> OpenCells, Board board)
+    {
+        if(board.cells[1][1].content == Seed.EMPTY)
+        {
+            row = 1;
+            col = 1;
+            return true;
+        }
+        if(board.cells[1][1].content != Seed.EMPTY)
+        {
+            if(board.cells[0][0].content == board.cells[1][1].content)
+            {
+                row = 2;
+                col = 2;
+                return true;
+            }
+
+            if (board.cells[2][2].content == board.cells[1][1].content)
+            {
+                row = 0;
+                col = 0;
+                return true;
+            }
+
+            if (board.cells[0][2].content == board.cells[1][1].content)
+            {
+                row = 2;
+                col = 0;
+                return true;
+            }
+            if(board.cells[2][0].content == board.cells[1][1].content)
+            {
+                row = 0;
+                col = 2;
+                return true;
             }
         }
         return false;
